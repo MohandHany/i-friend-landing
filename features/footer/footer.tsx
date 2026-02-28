@@ -1,39 +1,6 @@
 import Image from "next/image";
+import { ifriendLinks, socialLinks } from "./data";
 
-const ifriendLinks = [
-  { label: "Features", href: "#powerful-features" },
-  { label: "Why iFriend", href: "#smart-parenting" },
-  { label: "Support & Safety", href: "#safe-online" },
-  { label: "How it Works", href: "#how-does-it-work" },
-  { label: "FAQ", href: "#faq" },
-];
-
-const socialLinks = [
-  {
-    id: "footer-facebook",
-    href: "#",
-    icon: "/facebook-icon.svg",
-    alt: "Facebook",
-  },
-  {
-    id: "footer-tiktok",
-    href: "#",
-    icon: "/tiktok.svg",
-    alt: "TikTok",
-  },
-  {
-    id: "footer-instagram",
-    href: "#",
-    icon: "/instagram.svg",
-    alt: "Instagram",
-  },
-  {
-    id: "footer-linkedin",
-    href: "#",
-    icon: "/linkedin.svg",
-    alt: "LinkedIn",
-  },
-];
 
 export default function Footer() {
   return (

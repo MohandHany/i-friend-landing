@@ -6,6 +6,7 @@ import TranslateIcon from "@/components/icons/translate-outline-icon";
 import MenuIcon from "@/components/icons/menu-outline-icon";
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
+import { navLinks } from "./data";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,13 +43,6 @@ export default function Navbar() {
     };
   }, [isOpen]);
 
-  const navLinks = [
-    { label: "Features", href: "#features" },
-    { label: "Product", href: "#product" },
-    { label: "Support & Safety", href: "#support-and-safety" },
-    { label: "How it Works", href: "#how-it-works" },
-    { label: "FAQ", href: "#faq" },
-  ];
 
   const handleNavClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
