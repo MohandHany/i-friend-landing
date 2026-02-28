@@ -1,12 +1,13 @@
 import HeroSection from "@/features/hero/hero-content";
-import SmartParentingSection from "@/features/smart-parenting/smart-parenting";
-import PowerfulFeaturesSection from "@/features/powerful-features/powerful-features";
-import SafeOnlineSection from "@/features/safe-online/safe-online";
-import HowDoesItWorkSection from "@/features/how-does-it-work/how-does-it-work";
+import FeaturesSection from "@/features/features/features";
+import ProductPreviewSection from "@/features/product-preview/product-preview";
+import SupportAndSafetySection from "@/features/support-and-safety/support-and-safety";
+import HowItWorksSection from "@/features/how-it-works/how-it-works";
 import ReviewsSection from "@/features/reviews/reviews";
 import FaqSection from "@/features/faq/faq";
 import DownloadSection from "@/features/download/download";
 import Footer from "@/features/footer/footer";
+import ScrollToTop from "@/components/scroll-to-top";
 
 export default function Home() {
   return (
@@ -14,14 +15,15 @@ export default function Home() {
       <HeroSection />
       <main className="2xl:w-[80%] w-[90%] mx-auto">
       </main>
-      <SmartParentingSection />
-      <PowerfulFeaturesSection />
-      <SafeOnlineSection />
-      <HowDoesItWorkSection />
+      <FeaturesSection />
+      <ProductPreviewSection />
+      <SupportAndSafetySection />
+      <HowItWorksSection />
       <ReviewsSection />
       <FaqSection />
       <DownloadSection />
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }

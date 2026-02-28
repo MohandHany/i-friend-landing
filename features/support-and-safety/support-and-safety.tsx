@@ -109,12 +109,12 @@ function FeatureAccordion({
   );
 }
 
-export default function SafeOnlineSection() {
+export default function SupportAndSafetySection() {
   const [activeId, setActiveId] = useState<string>("smart-emotional");
 
   return (
     <section
-      id="safe-online"
+      id="support-and-safety"
       className="relative flex items-center justify-center pt-35 pb-22 w-full overflow-hidden"
     >
       <div className="2xl:w-[85%] w-[90%] flex flex-col gap-20">

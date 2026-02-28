@@ -45,10 +45,22 @@ export default function Navbar() {
   const navLinks = [
     { label: "Features", href: "#features" },
     { label: "Product", href: "#product" },
-    { label: "Support & Safety", href: "#support" },
+    { label: "Support & Safety", href: "#support-and-safety" },
     { label: "How it Works", href: "#how-it-works" },
     { label: "FAQ", href: "#faq" },
   ];
+
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    e.preventDefault();
+    const id = href.replace("#", "");
+    const target = document.getElementById(id);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   return (
     <>
@@ -75,6 +87,7 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
                 className="text-black text-base 2xl:text-lg font-medium hover:text-primary-blue transition-colors"
               >
                 {link.label}
@@ -149,7 +162,10 @@ export default function Navbar() {
                   transitionProperty: "opacity, transform, color",
                   transitionDuration: isOpen ? "400ms" : "0ms",
                 }}
-                onClick={() => setIsOpen(false)}
+                onClick={(e) => {
+                  handleNavClick(e, link.href);
+                  setIsOpen(false);
+                }}
               >
                 {link.label}
               </Link>

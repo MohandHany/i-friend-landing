@@ -37,10 +37,10 @@ const steps = [
   },
 ];
 
-export default function HowDoesItWorkSection() {
+export default function HowItWorksSection() {
   return (
     <section
-      id="how-does-it-work"
+      id="how-it-works"
       className="relative flex items-center justify-center py-22 lg:pb-30 w-full overflow-hidden"
     >
       <div className="2xl:w-[85%] w-[90%] flex flex-col gap-16">

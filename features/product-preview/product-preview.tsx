@@ -101,14 +101,14 @@ function FeatureCard({
   );
 }
 
-export default function PowerfulFeaturesSection() {
+export default function ProductPreviewSection() {
   const [activeId, setActiveId] = useState<string>("safe-content");
 
   const activeFeature = features.find((f) => f.id === activeId)!;
 
   return (
     <section
-      id="powerful-features"
+      id="product"
       className="relative flex items-center justify-center py-22 w-full bg-primary-blue overflow-hidden"
     >
       {/* Background decorative vector */}

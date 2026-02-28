@@ -69,13 +69,13 @@ function FeatureCard({
   );
 }
 
-export default function SmartParentingSection() {
+export default function FeaturesSection() {
   const leftFeatures = features.filter((f) => f.side === "left");
   const rightFeatures = features.filter((f) => f.side === "right");
 
   return (
     <section
-      id="smart-parenting"
+      id="features"
       className="relative flex items-center justify-center py-16 lg:py-24 w-full"
     >
       <div className="2xl:w-[85%] w-[90%] flex flex-col gap-25">
