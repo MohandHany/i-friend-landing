@@ -2,18 +2,27 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { productFeatures as features } from "./data";
+import { useTranslations } from "next-intl";
+import { productFeatureIds, getProductIcon, getProductImage } from "./data";
 import { FeatureCard } from "./components/feature-card";
 
 export default function ProductPreviewSection() {
+  const t = useTranslations("product");
   const [activeId, setActiveId] = useState<string>("safe-content");
 
-  const activeFeature = features.find((f) => f.id === activeId)!;
+  const features = productFeatureIds.map((id) => ({
+    id,
+    icon: getProductIcon(id),
+    title: t(`items.${id}.title`),
+    description: t(`items.${id}.description`),
+    image: getProductImage(id).src,
+    imageAlt: t(`items.${id}.imageAlt`),
+  }));
 
   return (
     <section
       id="product"
-      className="relative flex items-center justify-center py-22 w-full bg-primary-blue overflow-hidden"
+      className="relative flex items-center justify-center py-35 w-full bg-primary-blue overflow-hidden"
     >
       {/* Background decorative vector */}
       <Image
@@ -29,7 +38,6 @@ export default function ProductPreviewSection() {
         {/* Left: Phone Mockup with animated screen */}
         <div className="w-full flex items-start justify-center flex-shrink-0">
           <div className="relative w-[300px] h-[580px] lg:w-[470px] lg:h-[580px] 2xl:w-[500px] 2xl:h-[650px]">
-            {/* Screen images — all stacked, fade in/out */}
             {features.map((feature) => (
               <div
                 key={feature.id}
@@ -53,12 +61,10 @@ export default function ProductPreviewSection() {
           {/* Heading */}
           <div className="relative z-10 flex flex-col gap-4">
             <h2 className="text-white text-[42px] lg:text-[36px] 2xl:text-[42px] font-medium leading-tight">
-              Powerful Features,{" "}
-              <span className="block">Simple Control</span>
+              {t("heading")}
             </h2>
             <p className="w-full text-light-blue/50 text-lg lg:text-base 2xl:text-lg leading-relaxed max-w-md">
-              Yes, the app is designed with a simple and user-friendly interface,
-              allowing parents to manage everything easily.
+              {t("description")}
             </p>
           </div>
 

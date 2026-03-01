@@ -1,8 +1,18 @@
 import Image from "next/image";
-import { ifriendLinks, socialLinks } from "./data";
+import { getTranslations } from "next-intl/server";
+import { socialLinks } from "./data";
 
+export default async function Footer() {
+  const t = await getTranslations("footer");
 
-export default function Footer() {
+  const ifriendLinks = [
+    { key: "features", label: t("links.features"), href: "#features" },
+    { key: "whyiFriend", label: t("links.whyiFriend"), href: "#product" },
+    { key: "supportAndSafety", label: t("links.supportAndSafety"), href: "#support-and-safety" },
+    { key: "howItWorks", label: t("links.howItWorks"), href: "#how-it-works" },
+    { key: "faq", label: t("links.faq"), href: "#faq" },
+  ];
+
   return (
     <footer className="w-full bg-white pt-12 pb-8">
       <div className="w-[90%] lg:w-[60%] mx-auto flex flex-col gap-10">
@@ -11,7 +21,7 @@ export default function Footer() {
         <div className="flex justify-center">
           <Image
             src="/iFriend-logo.svg"
-            alt="iFriend Logo"
+            alt={t("logoAlt")}
             width={180}
             height={90}
             className="h-24.7 w-auto object-contain"
@@ -24,11 +34,11 @@ export default function Footer() {
           {/* Column 1: iFriend links */}
           <div className="flex flex-col gap-4">
             <h3 className="font-medium tracking-widest text-navy-blue uppercase">
-              iFriend
+              {t("iFriendColumn")}
             </h3>
             <ul className="flex flex-col gap-3">
               {ifriendLinks.map((link) => (
-                <li key={link.label}>
+                <li key={link.key}>
                   <a
                     href={link.href}
                     className="text-dark-natural font-medium text-base hover:text-primary-blue transition-colors duration-200"
@@ -43,7 +53,7 @@ export default function Footer() {
           {/* Column 2: Download App */}
           <div className="flex flex-col gap-4">
             <h3 className="font-medium tracking-widest text-navy-blue uppercase">
-              Download App
+              {t("downloadColumn")}
             </h3>
             <ul className="flex flex-col gap-3">
               <li>
@@ -52,7 +62,7 @@ export default function Footer() {
                   href="#"
                   className="text-dark-natural font-medium text-base hover:text-primary-blue transition-colors duration-200"
                 >
-                  Android
+                  {t("androidLink")}
                 </a>
               </li>
             </ul>
@@ -61,7 +71,7 @@ export default function Footer() {
           {/* Column 3: Follow */}
           <div className="flex flex-col gap-4">
             <h3 className="font-medium tracking-widest text-navy-blue uppercase">
-              Follow
+              {t("followColumn")}
             </h3>
             <div className="flex items-center gap-3 flex-wrap">
               {socialLinks.map((social) => (
@@ -87,7 +97,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <p className="text-center text-dark-natural">
-          © 2026 iFriend . All rights reserved.
+          {t("copyright")}
         </p>
 
       </div>

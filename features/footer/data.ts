@@ -1,22 +1,9 @@
-export type FooterLink = {
-  label: string;
-  href: string;
-};
-
 export type SocialLink = {
   id: string;
   href: string;
   icon: string;
   alt: string;
 };
-
-export const ifriendLinks: FooterLink[] = [
-  { label: "Features", href: "#powerful-features" },
-  { label: "Why iFriend", href: "#smart-parenting" },
-  { label: "Support & Safety", href: "#safe-online" },
-  { label: "How it Works", href: "#how-does-it-work" },
-  { label: "FAQ", href: "#faq" },
-];
 
 export const socialLinks: SocialLink[] = [
   {

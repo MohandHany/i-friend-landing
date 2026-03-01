@@ -4,6 +4,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --font-poppins: var(--font-poppins);
+  --font-cairo: var(--font-cairo);
   --color-primary-blue: #0066FF;
   --color-primary-blue-hover: #1447e6;
   --color-light-blue: #F5F6FA;
@@ -138,6 +140,11 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-poppins), sans-serif;
+  }
+
+  /* Arabic locale: switch to Cairo */
+  body.font-cairo {
+    font-family: var(--font-cairo), sans-serif;
   }
 }
 

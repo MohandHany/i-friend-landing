@@ -1,29 +1,7 @@
-import HeroSection from "@/features/hero/hero-content";
-import FeaturesSection from "@/features/features/features";
-import ProductPreviewSection from "@/features/product-preview/product-preview";
-import SupportAndSafetySection from "@/features/support-and-safety/support-and-safety";
-import HowItWorksSection from "@/features/how-it-works/how-it-works";
-import ReviewsSection from "@/features/reviews/reviews";
-import FaqSection from "@/features/faq/faq";
-import DownloadSection from "@/features/download/download";
-import Footer from "@/features/footer/footer";
-import ScrollToTop from "@/components/scroll-to-top";
+// This file is kept for compatibility but the middleware handles all routing.
+// Middleware redirects / -> /en or /ar based on cookie/Accept-Language.
+import { redirect } from "next/navigation";
 
-export default function Home() {
-  return (
-    <div className="min-h-screen">
-      <HeroSection />
-      <main className="2xl:w-[80%] w-[90%] mx-auto">
-      </main>
-      <FeaturesSection />
-      <ProductPreviewSection />
-      <SupportAndSafetySection />
-      <HowItWorksSection />
-      <ReviewsSection />
-      <FaqSection />
-      <DownloadSection />
-      <Footer />
-      <ScrollToTop />
-    </div>
-  );
+export default function RootPage() {
+  redirect("/en");
 }

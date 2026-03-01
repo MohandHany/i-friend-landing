@@ -1,31 +1,10 @@
-import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
-import "./globals.css";
-import Navbar from "@/features/navbar/navbar";
-
-const poppins = Poppins({
-  variable: "--font-poppins",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  subsets: ["latin"],
-  display: "swap",
-});
-
-export const metadata: Metadata = {
-  title: "iFriend",
-  description: "iFriend app",
-};
-
+// This root layout is intentionally minimal.
+// The [locale] layout handles all rendering.
+// The middleware redirects / -> /en or /ar automatically.
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      <body className={`${poppins.variable} antialiased`}>
-        <Navbar />
-        {children}
-      </body>
-    </html>
-  );
+}) {
+  return children;
 }

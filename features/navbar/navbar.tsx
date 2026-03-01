@@ -2,16 +2,27 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
+import { useTranslations, useLocale } from "next-intl";
 import TranslateIcon from "@/components/icons/translate-outline-icon";
 import MenuIcon from "@/components/icons/menu-outline-icon";
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
-import { navLinks } from "./data";
+import LanguageSwitcher from "@/components/language-switcher";
 
 export default function Navbar() {
+  const t = useTranslations("navbar");
+  const locale = useLocale();
   const [isOpen, setIsOpen] = useState(false);
   const [visible, setVisible] = useState(true);
   const lastScrollY = useRef(0);
+
+  const navLinks = [
+    { key: "features", label: t("links.features"), href: "#features" },
+    { key: "product", label: t("links.product"), href: "#product" },
+    { key: "supportAndSafety", label: t("links.supportAndSafety"), href: "#support-and-safety" },
+    { key: "howItWorks", label: t("links.howItWorks"), href: "#how-it-works" },
+    { key: "faq", label: t("links.faq"), href: "#faq" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -64,13 +75,13 @@ export default function Navbar() {
       >
         <header className="w-full 2xl:max-w-[90%] max-w-[93%] mx-auto bg-light-blue/70 backdrop-blur-lg rounded-full pr-3 lg:pr-6 px-6 py-3 flex items-center justify-between transition-all duration-300">
           {/* Logo */}
-          <Link href="/" className="flex-shrink-0">
+          <Link href={`/${locale}`} className="flex-shrink-0">
             <Image
               src="/iFriend-logo.svg"
               alt="iFriend Logo"
               width={120}
               height={60}
-              className="h-15 w-auto ml-2"
+              className="h-15 w-auto ms-2"
               priority
             />
           </Link>
@@ -79,7 +90,7 @@ export default function Navbar() {
           <nav className="hidden lg:flex items-center 2xl:gap-8 gap-6">
             {navLinks.map((link) => (
               <Link
-                key={link.label}
+                key={link.key}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
                 className="text-black text-base 2xl:text-lg font-medium hover:text-primary-blue transition-colors"
@@ -91,12 +102,11 @@ export default function Navbar() {
 
           {/* Right Actions */}
           <div className="hidden lg:flex items-center h-fit gap-4">
-            <Button className="flex items-center gap-2 p-6 rounded-full bg-natural text-base 2xl:text-lg text-black font-medium hover:bg-natural-hover transition-colors">
-              عربي
-              <TranslateIcon className="h-4 w-4" />
-            </Button>
+            <LanguageSwitcher
+              className="flex items-center gap-2 p-6 rounded-full bg-natural text-base 2xl:text-lg text-black font-medium hover:bg-natural-hover transition-colors"
+            />
             <Button className="p-6 rounded-full bg-primary-blue text-white text-base 2xl:text-lg font-semibold hover:bg-primary-blue-hover transition-colors">
-              Download App
+              {t("downloadApp")}
             </Button>
           </div>
 
@@ -104,7 +114,7 @@ export default function Navbar() {
           <button
             className="lg:hidden p-5 text-[var(--color-navy-blue)] rounded-full bg-[#E5E7EB] hover:bg-gray-300 transition-colors"
             onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
+            aria-label={t("toggleMenu")}
           >
             <MenuIcon className="h-6 w-6" />
           </button>
@@ -120,13 +130,13 @@ export default function Navbar() {
       >
         {/* Top bar inside menu */}
         <div className="flex items-center justify-between p-4">
-          <Link href="/" onClick={() => setIsOpen(false)}>
+          <Link href={`/${locale}`} onClick={() => setIsOpen(false)}>
             <Image
               src="/iFriend-logo.svg"
               alt="iFriend Logo"
               width={120}
               height={60}
-              className="h-15 w-auto ml-4"
+              className="h-15 w-auto ms-4"
               priority
             />
           </Link>
@@ -135,7 +145,7 @@ export default function Navbar() {
           <button
             className="p-4 rounded-full bg-[#E5E7EB] hover:bg-gray-300 transition-colors"
             onClick={() => setIsOpen(false)}
-            aria-label="Close menu"
+            aria-label={t("closeMenu")}
           >
             <X className="h-6 w-6 text-primary-blue" />
           </button>
@@ -144,7 +154,7 @@ export default function Navbar() {
         {/* Nav Links */}
         <nav className="flex-1 flex flex-col px-8 mt-4 overflow-y-auto">
           {navLinks.map((link, index) => (
-            <div key={link.label}>
+            <div key={link.key}>
               <Link
                 href={link.href}
                 className={`block py-4 text-[1.5rem] font-medium text-black hover:text-primary-blue transition-colors duration-200 transform ${isOpen
@@ -173,12 +183,12 @@ export default function Navbar() {
             }`}
           style={{ transitionDelay: isOpen ? "400ms" : "0ms" }}
         >
-          <Button className="flex items-center justify-center gap-2 px-5 py-6 rounded-full bg-[#E5E7EB] text-black text-base font-medium hover:bg-gray-300 transition-colors w-full">
-            عربي
-            <TranslateIcon className="h-5 w-5" />
-          </Button>
+          <LanguageSwitcher
+            className="flex items-center justify-center gap-2 px-5 py-6 rounded-full bg-[#E5E7EB] text-black text-base font-medium hover:bg-gray-300 transition-colors w-full"
+            iconClassName="h-5 w-5"
+          />
           <Button className="px-6 py-6 rounded-full bg-primary-blue text-white text-base font-semibold hover:bg-primary-blue-hover transition-colors w-full">
-            Download App
+            {t("downloadApp")}
           </Button>
         </div>
       </div>

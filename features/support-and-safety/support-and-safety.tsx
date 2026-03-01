@@ -2,11 +2,20 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { safetyFeatures as features } from "./data";
+import { useTranslations } from "next-intl";
+import { safetyFeatureIds, getSafetyIcon } from "./data";
 import { FeatureAccordion } from "./components/feature-accordion";
 
 export default function SupportAndSafetySection() {
+  const t = useTranslations("supportAndSafety");
   const [activeId, setActiveId] = useState<string>("smart-emotional");
+
+  const features = safetyFeatureIds.map((id) => ({
+    id,
+    icon: getSafetyIcon(id),
+    title: t(`items.${id}.title`),
+    description: t(`items.${id}.description`),
+  }));
 
   return (
     <section
@@ -17,15 +26,13 @@ export default function SupportAndSafetySection() {
         {/* Header — centered */}
         <div className="flex flex-col items-center gap-4 text-center">
           <h2 className="text-[32px] lg:text-[44px] 2xl:text-[48px] font-medium leading-tight">
-            We help you{" "}
-            <span className="text-primary-blue">keep</span> your
-            <span className="block">
-              child <span className="text-primary-blue">safe online</span>
-            </span>
+            {t("headingPre")}{" "}
+            <span className="text-primary-blue">{t("keep")}</span>{" "}
+            {t("headingMid") && <>{t("headingMid")}{" "}</>}
+            <span className="text-primary-blue">{t("safeOnline")}</span>
           </h2>
           <p className="text-dark-natural text-lg lg:text-[20px] 2xl:text-[22px] max-w-xl">
-            See how the child app works to protect, guide, and support healthy
-            digital habits.
+            {t("description")}
           </p>
         </div>
 
@@ -51,7 +58,7 @@ export default function SupportAndSafetySection() {
             <div className="relative w-full max-w-[520px] aspect-square">
               <Image
                 src="/child-safe-image.svg"
-                alt="Child using iFriend app safely"
+                alt={t("childImageAlt")}
                 fill
                 className="object-contain"
               />
