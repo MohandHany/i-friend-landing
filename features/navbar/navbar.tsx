@@ -75,16 +75,14 @@ export default function Navbar() {
       >
         <header className="w-full 2xl:max-w-[90%] max-w-[93%] mx-auto bg-light-blue/70 backdrop-blur-lg rounded-full pr-3 lg:pr-6 px-6 py-3 flex items-center justify-between transition-all duration-300">
           {/* Logo */}
-          <Link href={`/${locale}`} className="flex-shrink-0">
-            <Image
-              src="/iFriend-logo.svg"
-              alt="iFriend Logo"
-              width={120}
-              height={60}
-              className="h-15 w-auto ms-2"
-              priority
-            />
-          </Link>
+          <Image
+            src="/iFriend-logo.svg"
+            alt="iFriend Logo"
+            width={120}
+            height={60}
+            className="h-15 w-auto ms-2"
+            priority
+          />
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center 2xl:gap-8 gap-6">

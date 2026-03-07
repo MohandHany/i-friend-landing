@@ -1,6 +1,5 @@
 "use client";
 
-import VideoIcon from "@/components/icons/video-outline-icon";
 import { useTranslations } from "next-intl";
 import { stepIds, getStepIcon } from "./data";
 
@@ -36,11 +35,18 @@ export default function HowItWorksSection() {
             </p>
           </div>
 
-          {/* Video / image placeholder */}
-          <div className="w-full md:w-[90%] lg:w-[70%] mx-auto rounded-3xl bg-primary-blue/20 flex items-center justify-center aspect-video rounded-4xl lg:outline-12 outline-8 outline-natural/20">
-            <div className="flex flex-col items-center justify-center gap-3 text-primary-blue/40">
-              <VideoIcon className="h-20 w-20 text-primary-blue/30" />
-            </div>
+          {/* Video */}
+          <div className="w-fit mx-auto rounded-4xl overflow-hidden lg:outline-12 outline-8 outline-natural/20">
+            <video
+              controls
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="max-h-[70vh] w-auto block"
+            >
+              <source src="/videos/download-app.mp4" type="video/mp4" />
+            </video>
           </div>
 
           <div className="flex flex-col lg:flex-row lg:items-start w-full md:ms-10 lg:ms-5 xl:ms-10">

@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import VideoIcon from "@/components/icons/video-outline-icon";
 import { useTranslations } from "next-intl";
 
 export default function HeroSection() {
@@ -35,10 +34,17 @@ export default function HeroSection() {
           </Button>
         </div>
         <div className="w-full lg:w-1/2 flex-shrink-0">
-          <div className="relative w-full aspect-video overflow-hidden bg-primary-blue/20 rounded-4xl lg:outline-12 outline-8 outline-natural/20">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <VideoIcon className="h-20 w-20 text-primary-blue/30" />
-            </div>
+          <div className="relative w-full aspect-video overflow-hidden rounded-4xl lg:outline-12 outline-8 outline-natural/20">
+            <video
+              controls
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+            >
+              <source src="/videos/hero-video.mp4" type="video/mp4" />
+            </video>
           </div>
         </div>
       </div>
