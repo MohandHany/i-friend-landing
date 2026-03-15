@@ -13,8 +13,7 @@ export default function Navbar() {
   const t = useTranslations("navbar");
   const locale = useLocale();
   const [isOpen, setIsOpen] = useState(false);
-  const [visible, setVisible] = useState(true);
-  const lastScrollY = useRef(0);
+  const [activeSection, setActiveSection] = useState<string>("");
 
   const navLinks = [
     { key: "features", label: t("links.features"), href: "#features" },
@@ -23,24 +22,6 @@ export default function Navbar() {
     { key: "howItWorks", label: t("links.howItWorks"), href: "#how-it-works" },
     { key: "faq", label: t("links.faq"), href: "#faq" },
   ];
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > lastScrollY.current && currentScrollY > 80) {
-        setVisible(false);
-        setIsOpen(false);
-      } else {
-        setVisible(true);
-      }
-
-      lastScrollY.current = currentScrollY;
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   // Prevent body scroll when menu is open
   useEffect(() => {
@@ -54,6 +35,26 @@ export default function Navbar() {
     };
   }, [isOpen]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ["features", "product", "support-and-safety", "how-it-works", "faq"];
+      let current = "";
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 150) {
+            current = section;
+          }
+        }
+      }
+      setActiveSection(current);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleNavClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
@@ -70,8 +71,7 @@ export default function Navbar() {
   return (
     <>
       <div
-        className={`fixed top-4 left-0 right-0 z-50 md:px-4 flex justify-center transition-all duration-300 ${visible ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
-          } ${isOpen ? "hidden" : "block"}`}
+        className={`fixed top-4 left-0 right-0 z-50 md:px-4 flex justify-center transition-all duration-300 translate-y-0 opacity-100 ${isOpen ? "hidden" : "block"}`}
       >
         <header className="w-full 2xl:max-w-[90%] max-w-[93%] mx-auto bg-light-blue/70 backdrop-blur-lg rounded-full pr-3 lg:pr-6 px-6 py-3 flex items-center justify-between transition-all duration-300">
           {/* Logo */}
@@ -91,7 +91,10 @@ export default function Navbar() {
                 key={link.key}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="text-black text-base 2xl:text-lg font-medium hover:text-primary-blue transition-colors"
+                className={`text-base 2xl:text-lg font-medium transition-colors ${activeSection === link.href.replace("#", "")
+                    ? "text-primary-blue"
+                    : "text-black hover:text-primary-blue"
+                  }`}
               >
                 {link.label}
               </Link>
@@ -155,9 +158,12 @@ export default function Navbar() {
             <div key={link.key}>
               <Link
                 href={link.href}
-                className={`block py-4 text-[1.5rem] font-medium text-black hover:text-primary-blue transition-colors duration-200 transform ${isOpen
+                className={`block py-4 text-[1.5rem] font-medium transition-colors duration-200 transform ${isOpen
                   ? "opacity-100 translate-x-0"
                   : "opacity-0 -translate-x-4"
+                  } ${activeSection === link.href.replace("#", "")
+                    ? "text-primary-blue"
+                    : "text-black hover:text-primary-blue"
                   }`}
                 style={{
                   transitionDelay: isOpen ? `${index * 60 + 150}ms` : "0ms",
@@ -181,10 +187,7 @@ export default function Navbar() {
             }`}
           style={{ transitionDelay: isOpen ? "400ms" : "0ms" }}
         >
-          <LanguageSwitcher
-            className="flex items-center justify-center gap-2 px-5 py-6 rounded-full bg-[#E5E7EB] text-black text-base font-medium hover:bg-gray-300 transition-colors w-full"
-            iconClassName="h-5 w-5"
-          />
+          <TranslateIcon className="h-6 w-6 text-primary-blue" />
           <Button className="px-6 py-6 rounded-full bg-primary-blue text-white text-base font-semibold hover:bg-primary-blue-hover transition-colors w-full">
             {t("downloadApp")}
           </Button>
