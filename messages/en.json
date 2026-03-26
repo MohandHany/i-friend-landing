@@ -3,219 +3,219 @@
     "links": {
       "features": "Features",
       "product": "Product",
-      "supportAndSafety": "Support & Safety",
-      "howItWorks": "How it Works",
+      "supportAndSafety": "Safety",
+      "howItWorks": "How It Works",
       "faq": "FAQ"
     },
     "switchLang": "عربي",
-    "downloadApp": "Download App",
-    "toggleMenu": "Toggle menu",
+    "downloadApp": "Download",
+    "toggleMenu": "Open menu",
     "closeMenu": "Close menu"
   },
   "hero": {
-    "headlinePre": "The smarter way to",
-    "protect": "protect",
-    "headlineMid": "your",
-    "kids": "kids'",
-    "headlinePost": "digital life",
-    "description": "iFriend helps parents manage screen time, block harmful content, and create a safe digital environment from one easy-to-use dashboard.",
-    "downloadAndroid": "Download for Android",
-    "androidIconAlt": "Android Icon",
-    "bgAlt": "Hero Background"
+    "headlinePre": "Peace of mind for parents.",
+    "protect": "Real protection",
+    "headlineMid": "for your",
+    "kids": "child’s",
+    "headlinePost": "digital world",
+    "description": "iFriend helps you protect your child online, manage screen time, and block harmful content - all from one simple dashboard.",
+    "downloadAndroid": "Download on Android",
+    "androidIconAlt": "Android icon",
+    "bgAlt": "App preview background"
   },
   "features": {
-    "sectionTitlePre": "Parenting Made",
+    "sectionTitlePre": "Smart Parenting.",
     "sectionTitleMid": "Simple &",
     "smart": "Smart",
     "secure": "Secure",
-    "description": "Manage your child's phone usage easily with powerful tools designed for safety and peace of mind.",
-    "phoneAlt": "iFriend App Screenshot",
+    "description": "Everything you need to keep your child safe - without stress or complexity.",
+    "phoneAlt": "iFriend app preview",
     "items": {
       "ai-ifriend": {
-        "title": "Ai iFriend",
-        "description": "A smart assistant that interacts with the child at times set by the parent. It talks with the child, answers their questions, and provides safe, age-appropriate support."
+        "title": "AI Companion",
+        "description": "A safe AI companion your child can talk to - fully guided and controlled by you."
       },
       "ai-reports": {
-        "title": "Ai Reports",
-        "description": "Daily AI-powered reports that give parents clear insights into the child's activity and behavior throughout the day."
+        "title": "AI Insights",
+        "description": "Get clear daily insights into your child’s activity, behavior, and digital habits."
       },
       "bluer": {
-        "title": "Bluer",
-        "description": "A smart content protection feature that blocks inappropriate and 18+ content, ensuring a safe and child-friendly digital environment."
+        "title": "Content Protection",
+        "description": "Blocks harmful and 18+ content to keep your child safe online."
       },
       "pediatric-emergency": {
-        "title": "Pediatric Emergency",
-        "description": "An advanced safety feature that monitors the child's location and instantly notifies parents if the child leaves the predefined safe area."
+        "title": "Instant Alerts",
+        "description": "Get notified immediately if your child leaves a safe area or may be in danger."
       }
     }
   },
   "product": {
-    "heading": "Powerful Features, Simple Control",
-    "description": "Yes, the app is designed with a simple and user-friendly interface, allowing parents to manage everything easily.",
+    "heading": "Total control. Zero stress.",
+    "description": "Simple to use. Powerful enough to protect what matters most.",
     "items": {
       "safe-content": {
         "title": "Safe Content & Apps",
-        "description": "iFriend helps block harmful content and keeps apps age-appropriate.",
-        "imageAlt": "App Management Screen"
+        "description": "Control what your child can access and block harmful content instantly.",
+        "imageAlt": "Content control screen"
       },
       "screen-time": {
         "title": "Healthy Screen Time",
-        "description": "Set daily limits and schedules to help your kids build healthy screen habits.",
-        "imageAlt": "Screen Time Screen"
+        "description": "Set daily limits and build healthier digital habits.",
+        "imageAlt": "Screen time management"
       },
       "calls": {
-        "title": "Calls",
-        "description": "Always be by your child’s side; instant calls provide the opportunity for pedagogical guidance and psychological support, wherever they may be.",
-        "imageAlt": "Calls Screen"
+        "title": "Call Control",
+        "description": "Manage who your child can contact and stay connected when it matters.",
+        "imageAlt": "Call control screen"
       },
       "family-location": {
-        "title": "Family Location",
-        "description": "Know where your child is and feel reassured wherever they go.",
-        "imageAlt": "Family Location Screen"
+        "title": "Live Location Tracking",
+        "description": "Always know where your child is and feel reassured wherever they go.",
+        "imageAlt": "Location tracking screen"
       }
     }
   },
   "supportAndSafety": {
-    "headingPre": "We help you",
-    "keep": "keep",
-    "headingMid": "your child",
-    "safeOnline": "safe online",
-    "description": "See how the child app works to protect, guide, and support healthy digital habits.",
-    "childImageAlt": "Child using iFriend app safely",
+    "headingPre": "Your child is",
+    "keep": "safe",
+    "headingMid": "even when you're",
+    "safeOnline": "not around",
+    "description": "iFriend helps you protect, guide, and support your child without making them feel watched.",
+    "childImageAlt": "Child using phone safely",
     "items": {
       "smart-emotional": {
-        "title": "Smart Emotional Support",
-        "description": "iFriend detects negative patterns and helps your child handle stress, bullying, and online pressure."
+        "title": "Emotional Support",
+        "description": "Detects signs of stress, bullying, or harmful behavior - and helps your child handle them safely."
       },
       "healthy-routine": {
-        "title": "Healthy Daily Routine",
-        "description": "Set daily limits and schedules to help your kids build healthy screen habits."
+        "title": "Healthy Habits",
+        "description": "Encourages balanced daily routines and responsible screen usage."
       },
       "privacy-safety": {
-        "title": "Privacy & Safety First",
-        "description": "Teaches kids how to protect their personal information and avoid unsafe online interactions."
+        "title": "Privacy Protection",
+        "description": "Keeps your child’s data safe and teaches them how to protect themselves online."
       },
       "focus-learning": {
-        "title": "Focus & Learning Mode",
-        "description": "Helps children stay focused during study time and reduce distractions automatically."
+        "title": "Focus Mode",
+        "description": "Reduces distractions and helps your child stay focused during study time."
       },
       "balanced-gaming": {
-        "title": "Balanced Gaming",
-        "description": "Keeps gaming fun and healthy with smart limits instead of strict blocks."
+        "title": "Smart Gaming Limits",
+        "description": "Keeps gaming fun and balanced without extreme restrictions."
       },
       "online-offline": {
-        "title": "Online & Offline Harmony",
-        "description": "Supports a healthy balance between digital life and real-world activities."
+        "title": "Screen-Life Balance",
+        "description": "Helps your child build a healthy balance between online and real life."
       }
     }
   },
   "howItWorks": {
-    "headingPre": "How does",
-    "iFriend": "iFriend work?",
-    "description": "Get started in seconds, and let iFriend be your child's digital friend—helping them use their phone safely and in a healthy balance.",
+    "headingPre": "Start protecting your child in",
+    "iFriend": "minutes",
+    "description": "Set up iFriend quickly and take control of your child’s digital safety right away.",
     "steps": {
       "download": {
-        "title": "Download App",
-        "description": "Download the app easily and get started in just a few simple steps."
+        "title": "Download the App",
+        "description": "Install iFriend and create your account in minutes."
       },
       "account-type": {
-        "title": "Child or Parent",
-        "description": "Choose the account type that fits you: Child or Parent, each with its own features."
+        "title": "Set Up Your Profile",
+        "description": "Create a parent account and add your child."
       },
       "link": {
-        "title": "Link With Child",
-        "description": "Connect your account with your child's account to manage and monitor easily."
+        "title": "Connect Devices",
+        "description": "Securely link your child’s device in seconds."
       },
       "monitor": {
-        "title": "Monitor Phone Safely",
-        "description": "Monitor phone usage safely and help your child develop healthy digital habits."
+        "title": "Stay in Control",
+        "description": "Monitor activity, block risks, and guide your child safely."
       }
     }
   },
   "reviews": {
-    "heading": "Trusted by Parents",
-    "subheading": "Real reviews. Real peace of mind.",
+    "heading": "Parents are already seeing the difference",
+    "subheading": "Real experiences. Real peace of mind.",
     "roleParent": "Parent",
     "items": {
       "1": {
         "name": "Sarah M.",
-        "review": "iFriend made parenting in the digital world so much easier"
+        "review": "I finally feel in control of my child’s online activity."
       },
       "2": {
         "name": "James K.",
-        "review": "My kids are safer online and I feel so much more at ease now"
+        "review": "I know my kids are safe - without constant checking."
       },
       "3": {
         "name": "Layla R.",
-        "review": "The emotional support feature is a game changer for our family"
+        "review": "The emotional support feature made a real difference for us."
       },
       "4": {
         "name": "Tom W.",
-        "review": "Screen time management has never been this simple and effective"
+        "review": "Screen time is no longer a daily struggle."
       },
       "5": {
         "name": "Mia C.",
-        "review": "iFriend helps my child stay focused during homework time perfectly"
+        "review": "My child is more focused and less distracted now."
       },
       "6": {
         "name": "Omar A.",
-        "review": "Balanced gaming feature keeps my son happy without overdoing it"
+        "review": "Gaming is finally under control without arguments."
       },
       "7": {
         "name": "Nina P.",
-        "review": "Privacy tools taught my daughter how to stay safe with her data"
+        "review": "My daughter is learning how to stay safe online."
       },
       "8": {
         "name": "Carlos G.",
-        "review": "I recommend iFriend to every parent who cares about online safety"
+        "review": "Every parent should have something like this."
       }
     }
   },
   "faq": {
-    "heading": "Have Questions?",
+    "heading": "Everything you need to know",
     "items": {
       "easy-to-use": {
-        "question": "Is the app easy to use?",
-        "answer": "Yes, the app is designed with a simple and user-friendly interface, allowing parents to manage everything easily."
+        "question": "Is it easy to use?",
+        "answer": "Yes. You can set everything up in minutes - no technical skills needed."
       },
       "screen-time": {
-        "question": "Can I set screen time limits?",
-        "answer": "Absolutely! You can set daily screen time limits, schedules, and app-specific restrictions for your child's device."
+        "question": "Can I control screen time?",
+        "answer": "Yes. Set daily limits, schedules, and app restrictions."
       },
       "data-safety": {
-        "question": "Is my child's data safe and private?",
-        "answer": "We take privacy seriously. All data is encrypted and we never share your child's information with third parties."
+        "question": "Is my child’s data safe?",
+        "answer": "Yes. All data is encrypted and fully protected."
       },
       "all-devices": {
-        "question": "Does the app work on all devices?",
-        "answer": "iFriend works on Android and iOS devices, making it easy to manage across all your family's smartphones and tablets."
+        "question": "Does it work on all devices?",
+        "answer": "Works on Android and iOS devices."
       }
     }
   },
   "download": {
-    "heading": "Your children's safety starts with a decision",
-    "description": "Download the iFriend app and make mobile use safe and beneficial for your kids.",
-    "downloadAndroid": "Download for Android",
-    "androidIconAlt": "Android Icon",
-    "screensAlt": "iFriend app screens showing sleep mode and app controls"
+    "heading": "Start protecting your child today",
+    "description": "Download iFriend and take control of your child’s digital safety in minutes.",
+    "downloadAndroid": "Download on Android",
+    "androidIconAlt": "Android icon",
+    "screensAlt": "App screens preview"
   },
   "footer": {
-    "logoAlt": "iFriend Logo",
+    "logoAlt": "iFriend logo",
     "iFriendColumn": "iFriend",
-    "downloadColumn": "Download App",
-    "followColumn": "Follow",
+    "downloadColumn": "Download",
+    "followColumn": "Follow us",
     "androidLink": "Android",
-    "copyright": "© 2026 iFriend . All rights reserved.",
+    "copyright": "© 2026 iFriend. All rights reserved.",
     "links": {
       "features": "Features",
       "whyiFriend": "Why iFriend",
-      "supportAndSafety": "Support & Safety",
-      "howItWorks": "How it Works",
+      "supportAndSafety": "Safety",
+      "howItWorks": "How It Works",
       "faq": "FAQ"
     }
   },
   "meta": {
-    "title": "iFriend – Smart Parenting App",
-    "description": "iFriend helps parents manage screen time, block harmful content, and keep kids safe online."
+    "title": "iFriend – Protect Your Child Online",
+    "description": "iFriend helps you protect your child, manage screen time, and block harmful content - all in one simple app."
   }
 }

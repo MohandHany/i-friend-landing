@@ -15,7 +15,7 @@ export default function HeroSection() {
         className="absolute inset-0 -z-1 object-cover"
       />
       <div className="2xl:w-[85%] w-[90%] flex flex-col-reverse lg:flex-row gap-10">
-        <div className="flex flex-col justify-between gap-10 lg:gap-5">
+        <div className="flex flex-col gap-10">
           <article className="flex flex-col gap-5">
             <h1 className="lg:text-[52px] text-[38px] font-semibold leading-tight">
               {t("headlinePre")}{" "}
