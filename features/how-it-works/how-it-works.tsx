@@ -26,7 +26,7 @@ export default function HowItWorksSection() {
 
           {/* Header */}
           <div className="flex flex-col gap-4 justify-center items-center">
-            <h2 className="text-[32px] lg:text-[44px] 2xl:text-[54px] font-medium">
+            <h2 className="text-[32px] lg:text-[44px] 2xl:text-[54px] font-medium text-center">
               {t("headingPre")}{" "}
               <span className="text-primary-blue">{t("iFriend")}</span>
             </h2>

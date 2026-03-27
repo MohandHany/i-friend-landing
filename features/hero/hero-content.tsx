@@ -33,8 +33,8 @@ export default function HeroSection() {
             {t("downloadAndroid")}
           </Button>
         </div>
-        <div className="w-full lg:w-1/2 flex-shrink-0">
-          <div className="relative w-full aspect-video overflow-hidden rounded-4xl lg:outline-12 outline-8 outline-natural/20">
+        <div className="flex justify-center items-center w-full lg:w-1/2 flex-shrink-0">
+          <div className="relative w-full h-fit aspect-video overflow-hidden rounded-4xl lg:outline-12 outline-8 outline-natural/20">
             <video
               controls
               autoPlay

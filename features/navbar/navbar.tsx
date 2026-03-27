@@ -92,8 +92,8 @@ export default function Navbar() {
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
                 className={`text-base 2xl:text-lg font-medium transition-colors ${activeSection === link.href.replace("#", "")
-                    ? "text-primary-blue"
-                    : "text-black hover:text-primary-blue"
+                  ? "text-primary-blue"
+                  : "text-black hover:text-primary-blue"
                   }`}
               >
                 {link.label}
@@ -187,7 +187,13 @@ export default function Navbar() {
             }`}
           style={{ transitionDelay: isOpen ? "400ms" : "0ms" }}
         >
-          <TranslateIcon className="h-6 w-6 text-primary-blue" />
+          <LanguageSwitcher
+            showLabel={true}
+            variant="ghost"
+            className="w-full h-12 p-0 flex items-center justify-center font-medium rounded-full bg-[#E5E7EB] hover:bg-gray-300 transition-colors shadow-sm"
+            iconClassName="h-6 w-6 font-medium"
+            onClick={() => setIsOpen(false)}
+          />
           <Button className="px-6 py-6 rounded-full bg-primary-blue text-white text-base font-semibold hover:bg-primary-blue-hover transition-colors w-full">
             {t("downloadApp")}
           </Button>
