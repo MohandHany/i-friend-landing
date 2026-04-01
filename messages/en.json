@@ -5,6 +5,7 @@
       "product": "Product",
       "supportAndSafety": "Safety",
       "howItWorks": "How It Works",
+      "playProtect": "Disable Play Protect",
       "faq": "FAQ"
     },
     "switchLang": "عربي",
@@ -168,6 +169,30 @@
       "8": {
         "name": "Carlos G.",
         "review": "Every parent should have something like this."
+      }
+    }
+  },
+  "playProtect": {
+    "heading": "Disable Play Protect",
+    "description": "If you're having trouble installing the app due to Google's Play Protect, follow these simple steps to temporarily disable the protection.",
+    "phoneImageAlt": "Play Protect settings screen on a smartphone",
+    "importantNote": "Important: Remember to re-enable Play Protect after installing the app for security reasons.",
+    "steps": {
+      "open-google-play": {
+        "title": "Open Google Play Store",
+        "description": "Open the Google Play Store on your child's device by tapping the app icon on the home screen."
+      },
+      "access-settings": {
+        "title": "Access Settings",
+        "description": "Tap the menu icon (≡) at the bottom or top corner, then select 'Settings' from the menu."
+      },
+      "navigate-to-protect": {
+        "title": "Navigate to Play Protect Settings",
+        "description": "Look for 'Play Protect' option in the Settings menu and tap it to enter the protection settings page."
+      },
+      "disable-protection": {
+        "title": "Disable the Protection",
+        "description": "You'll find a toggle switch next to 'Scan apps with Play Protect'. Tap the toggle to temporarily disable the protection."
       }
     }
   },

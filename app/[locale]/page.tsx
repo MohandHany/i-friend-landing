@@ -3,6 +3,7 @@ import FeaturesSection from "@/features/features/features";
 import ProductPreviewSection from "@/features/product-preview/product-preview";
 import SupportAndSafetySection from "@/features/support-and-safety/support-and-safety";
 import HowItWorksSection from "@/features/how-it-works/how-it-works";
+import PlayProtectSection from "@/features/play-protect/play-protect";
 import ReviewsSection from "@/features/reviews/reviews";
 import FaqSection from "@/features/faq/faq";
 import DownloadSection from "@/features/download/download";
@@ -19,6 +20,7 @@ export default function Home() {
       <ProductPreviewSection />
       <SupportAndSafetySection />
       <HowItWorksSection />
+      <PlayProtectSection />
       <ReviewsSection />
       <FaqSection />
       <DownloadSection />
