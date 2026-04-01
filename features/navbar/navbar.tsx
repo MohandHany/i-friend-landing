@@ -20,6 +20,7 @@ export default function Navbar() {
     { key: "product", label: t("links.product"), href: "#product" },
     { key: "supportAndSafety", label: t("links.supportAndSafety"), href: "#support-and-safety" },
     { key: "howItWorks", label: t("links.howItWorks"), href: "#how-it-works" },
+    { key: "playProtect", label: t("links.playProtect"), href: "#play-protect" },
     { key: "faq", label: t("links.faq"), href: "#faq" },
   ];
 
@@ -37,7 +38,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["features", "product", "support-and-safety", "how-it-works", "faq"];
+      const sections = ["features", "product", "support-and-safety", "how-it-works", "play-protect", "faq"];
       let current = "";
       for (const section of sections) {
         const element = document.getElementById(section);
