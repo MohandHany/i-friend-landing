@@ -38,7 +38,7 @@ export default function PlayProtectSection() {
             <div className="relative w-full max-w-xs group">
               {/* Gradient glow background */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary-blue/20 to-primary-blue/5 rounded-[44px] blur-3xl -z-10 group-hover:blur-2xl transition-all duration-500" />
-              
+
               {/* Phone frame */}
               <div className="rounded-[40px] overflow-hidden shadow-2xl border-8 border-gray-900/20 backdrop-blur-sm group-hover:shadow-3xl transition-all duration-500">
                 <Image
@@ -56,8 +56,8 @@ export default function PlayProtectSection() {
           {/* Steps */}
           <div className="w-full lg:w-3/5 flex flex-col gap-5">
             {steps.map(({ id, icon: Icon, title, description, index }) => (
-              <div 
-                key={id} 
+              <div
+                key={id}
                 className="group flex gap-5 p-6 lg:p-7 rounded-2xl bg-gradient-to-br from-background/80 to-background/40 border border-primary-blue/15 hover:border-primary-blue/40 hover:shadow-lg hover:bg-gradient-to-br hover:from-background hover:to-primary-blue/5 transition-all duration-300 cursor-default"
               >
                 {/* Step number circle with gradient */}
@@ -78,7 +78,7 @@ export default function PlayProtectSection() {
             ))}
 
             {/* Important Note Alert */}
-            <div className="mt-4 p-6 rounded-2xl bg-gradient-to-r from-amber-50/60 to-orange-50/40 border border-amber-200/40 border-l-4 border-l-amber-500 shadow-sm hover:shadow-md transition-shadow duration-300">
+            <div className="mt-4 p-6 rounded-2xl bg-gradient-to-r from-amber-50/60 to-orange-50/40 border border-amber-200/40 border-l-4 border-l-amber-500 shadow-sm">
               <div className="flex gap-4 items-start">
                 <div className="text-2xl flex-shrink-0">⚠️</div>
                 <p className="text-amber-900 font-semibold text-base leading-relaxed">
