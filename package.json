@@ -40,5 +40,8 @@
     "overrides": {
       "brace-expansion": "^5.0.5"
     }
+  },
+  "engines": {
+    "node": ">=20.9.0"
   }
 }
